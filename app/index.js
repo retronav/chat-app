@@ -34,7 +34,12 @@ $(function () {
     
     $('form').submit(function(e){
       e.preventDefault(); // prevents page reloading
-      socket.emit('chat message', {msg : $('#m').val(), user : username.name, color : username.color});
+      //emit the message to server
+      socket.emit('chat message', {
+        msg : $('#m').val(),
+         user : username.name,
+          color : username.color
+        });
       $('#m').val('');
       return false;
     });
@@ -42,12 +47,15 @@ $(function () {
       appendMsg(data.user + ' : ' + data.msg , 'color : '+data.color);
     });
       socket.on('user-connected', function(data){
-      $('#messages').append($('<h1>').append('<span>').text(data.name + ' connected'));
+        appendMsg(data.name + ' connected', 'color : '+data.color);
       });
       socket.on('user-disconnected', function(name){
-      $('#messages').append($('<h1>').append('<span>').text(name + ' disconnected'));
+        appendMsg(name + ' disconnected');
       })
       socket.on('connect', function(data){
-      $('#messages').append($('<h1>').append('<span>').text('You connected'));
-      });
+        appendMsg('You connected');
+      })
+      socket.on('user-online', (data)=>{
+        $('#msg-container').text(data)
+      })
   });

@@ -12,16 +12,18 @@ body {
 	list-style-type: none;
 	margin: 0;
     padding: 0;
-    height: 90%;
+	height: 90%;
+	overflow: scroll;
+	object-fit: cover;
 }
 
-#messages #msg-container, #messages h1 {
+#messages #msg-container{
 	padding: 5px 10px;
 	background: rgb(187, 187, 187);
 }
 
-#messages #msg-container:nth-child(odd), #messages h1:nth-child(odd) {
-	background: #eee;
+#messages #msg-container:nth-child(odd){
+	background: rgb(216, 216, 216);
 }
 #messages span{
 	font-size : 16px;
