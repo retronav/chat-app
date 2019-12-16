@@ -1,0 +1,53 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font: 13px Poppins, sans-serif;
+}
+
+#messages {
+	list-style-type: none;
+	margin: 0;
+    padding: 0;
+    height: 90%;
+}
+
+#messages #msg-container, #messages h1 {
+	padding: 5px 10px;
+	background: rgb(187, 187, 187);
+}
+
+#messages #msg-container:nth-child(odd), #messages h1:nth-child(odd) {
+	background: #eee;
+}
+#messages span{
+	font-size : 16px;
+	vertical-align : middle;
+}
+form {
+	background: #000;
+	padding: 3px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+    flex-direction: row;
+    height: 10%;
+}
+
+form #m {
+	font-size: 90%;
+	width: 90%;
+	min-height: 100%;
+	font-size: 100%;
+}
+
+form #send {
+	width: 10%;
+	min-height: 100%;
+	padding: 5px;
+	background: linear-gradient( to right, rgb(0, 102, 255), rgb(17, 236, 127));
+}
