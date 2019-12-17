@@ -35,6 +35,6 @@ jobs:
 
       # run tests!
       - run:
-        -name: Start the server
-        -command: |
+          -name: Start the server
+          -command: |
                npm start
