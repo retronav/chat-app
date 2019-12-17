@@ -27,10 +27,12 @@ jobs:
             - v1-dependencies-
 
       - run:
-        -name : npm checks
-        -command : | 
-                    npm install
-                    npm uninstall
+        -name : npm installation
+        -command : npm install
+      
+      - run:
+        -name : npm uninstallation
+        -command : npm uninstall
 
       - save_cache:
           paths:
