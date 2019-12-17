@@ -28,7 +28,8 @@ jobs:
 
       - run:
         -name : npm installation
-        -command : npm install
+        -command : |
+           npm install
       - run: npm uninstall
       - save_cache:
           paths:
