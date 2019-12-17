@@ -27,9 +27,9 @@ jobs:
             - v1-dependencies-
 
       - run:
-        -name : npm installation
-        -command : |
-           npm install
+          -name : npm installation
+          -command : |
+            npm install
       - run: npm uninstall
       - save_cache:
           paths:
