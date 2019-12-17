@@ -26,10 +26,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run:
-          -name : npm installation
-          -command : |
-            npm install
+      - run: npm install
       - run: npm uninstall
       - save_cache:
           paths:
