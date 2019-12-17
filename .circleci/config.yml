@@ -26,6 +26,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       - run: npm cache clean --force
+      - run: npm install npm@latest -g
       - run: npm install
       - save_cache:
           paths:
