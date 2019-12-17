@@ -29,11 +29,7 @@ jobs:
       - run:
         -name : npm installation
         -command : npm install
-      
-      - run:
-        -name : npm uninstallation
-        -command : npm uninstall
-
+      - run: npm uninstall
       - save_cache:
           paths:
             - node_modules
