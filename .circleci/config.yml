@@ -27,7 +27,6 @@ jobs:
             - v1-dependencies-
       - run: npm cache clean --force
       - run: npm install
-      - run: npm uninstall
       - save_cache:
           paths:
             - node_modules
