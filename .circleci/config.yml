@@ -27,6 +27,7 @@ jobs:
             - v1-dependencies-
       - run: npm cache clean --force
       - run: npm install
+      - run: curl server.js
       - save_cache:
           paths:
             - node_modules
