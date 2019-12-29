@@ -27,11 +27,6 @@ jobs:
             - v1-dependencies-
       - run: npm cache clean --force
       - run: npm install
-      - run: |
-        APP=/app
-          if [ -d "$APP" ]; then
-              echo "$APP is a directory"
-          fi
 
       - save_cache:
           paths:
